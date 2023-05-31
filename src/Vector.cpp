@@ -1,4 +1,5 @@
 #include "jMath/Vector.h"
+#include "jMath/DataTypes.h"
 #include <iostream>
 
 namespace jMath
@@ -18,7 +19,7 @@ namespace jMath
 		: m_Dtype(type), m_Length(length)
 	{
 		m_Size = SizeOfType(type) * m_Length;
-		// TODO: Create buffer
+		// TODO: Create Buffer
 	}
 
 	Vector::Vector(Allocator* a, DataType type, ll length){}
@@ -38,7 +39,7 @@ namespace jMath
 
 	Vector::Vector(const Vector& other)
 	{
-		
+
 	}
 
 	Vector::Vector(Vector&& other)
@@ -68,7 +69,7 @@ namespace jMath
 
 	std::ostream& operator<<(std::ostream& out, const Vector& vector)
 	{
-		for (int i = 0; i < vector.m_Length; i++) 
+		for (int i = 0; i < vector.m_Length; i++)
 		{
 			switch (vector.m_Dtype)
 			{

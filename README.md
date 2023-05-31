@@ -2,7 +2,7 @@ This is an example project using CMake.
 
 The requirements are:
 
-- CMake 3.11 or better; 3.14+ highly recommended.
+- CMake 3.16 or better
 - A C++17 compatible compiler
 - The Boost libararies (header only part is fine)
 - Git
@@ -22,7 +22,7 @@ To build:
 cmake --build build
 ```
 
-To test (`--target` can be written as `-t` in CMake 3.15+):
+To test (`--target` or `-t`):
 
 ```bash
 cmake --build build --target test
@@ -40,7 +40,4 @@ To use an IDE, such as Xcode:
 cmake -S . -B xbuild -GXcode
 cmake --open xbuild
 ```
-
-The CMakeLists show off several useful design patterns for CMake.
-
 
