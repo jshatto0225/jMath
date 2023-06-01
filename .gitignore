@@ -4,4 +4,4 @@ CMakeFiles/*
 .cache/*
 .vscode/*
 .dir-locals.el
-
+.dif-locals.el~

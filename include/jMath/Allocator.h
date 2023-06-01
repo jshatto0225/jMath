@@ -5,19 +5,29 @@
 namespace jMath
 {
 
-	/// <summary>
-	///  Class to handle all data allocation
-	/// </summary>
-	class Allocator
-	{
-	};
+    enum DeviceType
+    {
+        CPU,
+        GPU
+    };
 
 	/// <summary>
 	/// Struct that can store allocation attributes
 	/// </summary>
 	struct AllocationAttributes
 	{
+        AllocationAttributes(bool packed = false, DeviceType device = CPU)
+            : Packed(packed), Device(device) {}
 		bool Packed;
+        DeviceType Device;
+	};
+	
+    /// <summary>
+	///  Class to handle all data allocation
+	/// </summary>
+	class Allocator
+	{
+        void Allocate(AllocationAttributes allocation_attribs = AllocationAttributes());
 	};
 
 	/// <summary>
@@ -27,5 +37,6 @@ namespace jMath
 	{
 		ll BytesAllocated;
 		ll BuffersAllocated;
+        ll LinkedBuffers;
 	};
 }
